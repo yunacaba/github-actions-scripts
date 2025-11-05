@@ -49,8 +49,7 @@ if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
 elif [ "$GITHUB_EVENT_NAME" = "push" ]; then
   echo "📤 Detected push event"
 
-  if [ -z "$GITHUB_REPOSITORY" ] || [ -z "$GITHUB_EVENT_BEFORE" ] || [ -z "$GITHUB_EVENT_AFTER"
-]; then
+  if [ -z "$GITHUB_REPOSITORY" ] || [ -z "$GITHUB_EVENT_BEFORE" ] || [ -z "$GITHUB_EVENT_AFTER"]; then
     echo "❌ Error: Missing GITHUB_REPOSITORY, GITHUB_EVENT_BEFORE, or GITHUB_EVENT_AFTER"
     exit 1
   fi
